@@ -1,6 +1,6 @@
 FROM node:alpine
 WORKDIR /forest-frontend
-RUN apk add python2
+RUN apk add python3
 RUN apk add build-base
 RUN apk add yarn
 COPY . .
