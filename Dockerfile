@@ -9,6 +9,7 @@ RUN npm install -g node-gyp
 RUN yarn cache clean
 RUN yarn add node-sass
 RUN yarn cache clean
+RUN yarn install
 RUN yarn upgrade
 RUN yarn install && NODE_ENV=production yarn build
 EXPOSE 3000
