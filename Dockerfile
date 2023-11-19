@@ -5,8 +5,10 @@ RUN apk add build-base
 RUN apk add yarn
 COPY . .
 RUN npm install -g npm
-RUN npm install -g node-gyp@8.4.1
-RUN yarn add node-sass@5.0.0
+RUN npm install -g node-gyp
+RUN yarn cache clean
+RUN yarn add node-sass
+RUN yarn cache clean
 RUN yarn upgrade
 RUN yarn install && NODE_ENV=production yarn build
 EXPOSE 3000
