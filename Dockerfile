@@ -7,7 +7,7 @@ COPY . .
 RUN npm install -g npm
 RUN npm install -g node-gyp
 RUN yarn cache clean
-RUN yarn add node-sass@8.0.0
+RUN yarn add node-sass@6.0.1
 RUN yarn cache clean
 RUN yarn install
 RUN yarn upgrade
